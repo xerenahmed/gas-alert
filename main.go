@@ -43,7 +43,6 @@ func main() {
 		_, err := client.R().SetQueryParams(map[string]string{
 			"module":   "gastracker",
 			"action":   "gasoracle",
-			"gasprice": "2000000000",
 			"apikey":   os.Getenv("ETHERSCAN_API_KEY"),
 		}).SetResult(&res).Get("")
 		if err != nil {
